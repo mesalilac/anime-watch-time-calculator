@@ -1,6 +1,7 @@
 {
   "name": "anime-watch-time-calculator",
   "version": "0.1.0",
+  "homepage": "https://senpai-10.github.io/anime-watch-time-calculator",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
