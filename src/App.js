@@ -23,8 +23,8 @@ function Calculate() {
     var hours = (minutes/60).toFixed(1)
     var days = (hours/24).toFixed(1)
 
-    document.getElementById("results").innerHTML += `
-      <h2>results</h2>
+    document.getElementById("results").innerHTML = `
+      
 
       <h4>You have to watch ${minutes} minutes(Non-stop)</h4>
       <h4>You have to watch ${hours} hours(Non-stop)</h4>
@@ -37,6 +37,8 @@ function App() {
   return (
     <center>
       <div className="App">
+        <h1 style={{color: "#4654a9"}}>Anime watch time calculator</h1>
+        <br />
         <input 
           id="number-of-episodes" 
           placeholder="Number of episodes"
@@ -52,7 +54,9 @@ function App() {
             Calculate
         </button>
 
-        <div id="results"></div>
+        <div id="results">
+          <h2>results</h2>
+        </div>
       </div>
     </center>
   
