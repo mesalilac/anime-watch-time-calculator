@@ -22,6 +22,7 @@ input {
 }
 
 #calculate-button {
+  outline: none;
   background: none;
   border: none;
   background-color: #4654a9;
