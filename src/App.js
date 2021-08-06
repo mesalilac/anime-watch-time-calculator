@@ -24,8 +24,6 @@ function Calculate() {
     var days = (hours/24).toFixed(1)
 
     document.getElementById("results").innerHTML = `
-      
-
       <h4>You have to watch ${minutes} minutes(Non-stop)</h4>
       <h4>You have to watch ${hours} hours(Non-stop)</h4>
       <h4>You have to watch ${days} days(Non-stop)</h4>
