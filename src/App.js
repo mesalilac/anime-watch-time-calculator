@@ -19,31 +19,43 @@ function Calculate() {
   } else {
     episodes_number_input.style.borderColor = colors.defaultBorderColor
     calculate.style.backgroundColor = colors.defaultBackGroundColor
-    
+    var minutes = episodes_number*24
+    var hours = (minutes/60).toFixed(1)
+    var days = (hours/24).toFixed(1)
+
+    document.getElementById("results").innerHTML += `
+      <h2>results</h2>
+
+      <h4>You have to watch ${minutes} minutes(Non-stop)</h4>
+      <h4>You have to watch ${hours} hours(Non-stop)</h4>
+      <h4>You have to watch ${days} days(Non-stop)</h4>
+    `
   }
 }
 
 function App() {
   return (
-    <div className="App">
-      <input 
-        id="number-of-episodes" 
-        placeholder="Number of episodes"
-        onKeyPress={(event) => {
-          if (!/[0-9]/.test(event.key)) {
-            event.preventDefault();
-          }
-        }}
-      />
-      <button 
-        id="calculate-button" 
-        onClick={Calculate}>
-          Calculate
-      </button>
+    <center>
+      <div className="App">
+        <input 
+          id="number-of-episodes" 
+          placeholder="Number of episodes"
+          onKeyPress={(event) => {
+            if (!/[0-9]/.test(event.key)) {
+              event.preventDefault();
+            }
+          }}
+        />
+        <button 
+          id="calculate-button" 
+          onClick={Calculate}>
+            Calculate
+        </button>
 
-      <p>
-      </p>
-    </div>
+        <div id="results"></div>
+      </div>
+    </center>
+  
   );
 }
 
